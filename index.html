@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huatan Milk Tea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="introScreen" class="screen active intro-screen">
+      <div class="bubble-field" aria-hidden="true"></div>
+      <div class="intro-card">
+        <img id="gameLogo" class="logo" alt="Huatan Milk Tea Logo" />
+        <h1>Huatan Milk Tea</h1>
+        <p>English Ordering Roleplay</p>
+        <button id="startBtn" class="primary-btn hidden">Start Order</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen">
+      <div class="shop-bg"></div>
+      <header class="topbar">
+        <div class="brand">
+          <img id="miniLogo" alt="Huatan Milk Tea Logo" />
+          <div>
+            <h2>Huatan Milk Tea</h2>
+            <span>Customer × Cashier Speaking Game</span>
+          </div>
+        </div>
+        <div id="progressBar" class="progress-bar"></div>
+      </header>
+
+      <section class="play-area">
+        <section class="role-panel customer-panel">
+          <div class="role-heading">
+            <span class="avatar">🧑</span>
+            <div><h3>Customer</h3><p>Choose the words. Read your sentence.</p></div>
+          </div>
+          <div class="speech-card customer-speech">
+            <div class="speaker-label">Customer says:</div>
+            <p id="customerSentence">Get ready to order!</p>
+          </div>
+          <div id="customerChoices" class="choice-grid word-grid"></div>
+          <div id="customerActions" class="action-row hidden">
+            <button id="confirmCustomer" class="confirm-btn">✓ Confirm</button>
+            <button id="changeCustomer" class="change-btn">✕ Change</button>
+          </div>
+        </section>
+
+        <section class="role-panel cashier-panel">
+          <div class="role-heading right">
+            <span class="avatar">👩‍🍳</span>
+            <div><h3>Cashier</h3><p>Listen and choose the matching picture.</p></div>
+          </div>
+          <div class="speech-card cashier-speech">
+            <div class="speaker-label">Cashier says:</div>
+            <p id="cashierSentence">Hello! Welcome to our tea shop. What would you like to drink?</p>
+          </div>
+          <div id="cashierChoices" class="choice-grid image-grid locked"></div>
+        </section>
+      </section>
+
+      <footer class="counter-zone">
+        <img id="counterImg" alt="Milk tea shop counter" />
+        <div id="statusText" class="status-pill">Customer chooses first.</div>
+      </footer>
+    </section>
+
+    <section id="finalScreen" class="screen final-screen">
+      <div class="final-bg"></div>
+      <div class="final-layout">
+        <section class="drink-stage">
+          <h2>Your Huatan Milk Tea is ready!</h2>
+          <div class="drink-builder">
+            <img id="finalCup" class="final-cup" alt="Selected cup" />
+            <div id="drinkFill" class="drink-fill"></div>
+            <div id="iceLayer" class="ice-layer"></div>
+            <div id="toppingLayer" class="topping-layer"></div>
+            <div class="sparkles">✨ ✨ ✨</div>
+          </div>
+          <div class="final-dialogue">
+            <p><strong>Cashier:</strong> Thank you! Enjoy your drink!</p>
+            <p><strong>Customer:</strong> Thank you!</p>
+          </div>
+        </section>
+        <section class="receipt-card">
+          <h2>HUATAN MILK TEA</h2>
+          <p class="receipt-subtitle">Order Receipt</p>
+          <div id="receiptLines" class="receipt-lines"></div>
+          <button id="playAgain" class="primary-btn">Play Again</button>
+        </section>
+      </div>
+      <div id="confetti" class="confetti"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
