@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huatan Milk Tea</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="intro" class="screen active intro-screen">
+      <div class="bubble-bg"></div>
+      <img class="intro-logo" src="https://github.com/nelsonsia27/TeaShop/blob/main/logo.png?raw=true" alt="Huatan Milk Tea Logo" />
+      <h1>HUATAN MILK TEA</h1>
+      <p>English Ordering Roleplay</p>
+      <button id="startBtn" class="main-btn">Start Order</button>
+    </section>
+
+    <section id="game" class="screen game-screen">
+      <header class="topbar">
+        <h1>HUATAN MILK TEA</h1>
+        <div id="progress" class="progress"></div>
+      </header>
+
+      <main class="play-area">
+        <section id="customerPanel" class="role-panel customer active-reader">
+          <div class="role-head">
+            <div class="avatar">🙂</div>
+            <div><h2>Customer</h2><p id="customerHint">Read, choose, confirm.</p></div>
+          </div>
+          <button id="customerBubble" class="speech-bubble customer-bubble read-target" type="button">
+            <span id="customerSentence"></span>
+          </button>
+          <div id="customerChoices" class="choice-grid words"></div>
+          <div id="customerActions" class="actions hidden">
+            <button id="confirmChoice" class="confirm-btn">✓ Confirm</button>
+            <button id="changeChoice" class="change-btn">✕ Change</button>
+          </div>
+        </section>
+
+        <section id="cashierPanel" class="role-panel cashier frozen">
+          <div class="role-head right">
+            <div><h2>Cashier</h2><p id="cashierHint">Wait for customer.</p></div>
+            <div class="avatar">👩‍🍳</div>
+          </div>
+          <button id="cashierBubble" class="speech-bubble cashier-bubble read-target" type="button">
+            <span id="cashierSentence"></span>
+          </button>
+          <div id="cashierChoices" class="choice-grid images"></div>
+        </section>
+      </main>
+    </section>
+
+    <section id="final" class="screen final-screen">
+      <h1>Your drink is ready!</h1>
+      <div class="final-layout">
+        <section class="final-card drink-card">
+          <h2>Finished Drink</h2>
+          <div id="drinkBuilder" class="drink-builder"></div>
+        </section>
+        <section class="final-card receipt-card">
+          <h2>Receipt</h2>
+          <div id="receipt" class="receipt"></div>
+        </section>
+      </div>
+      <div class="final-actions">
+        <button id="playAgain" class="main-btn small">Play Again</button>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
